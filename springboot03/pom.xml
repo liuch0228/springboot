@@ -24,7 +24,7 @@
 		<!--本机安装的是jdk1.7，此处改为1.7，project Structure里的project SDK改为jdk1.7安装地址，
 		settings下Java Compile下的target bytecode version也改为1.7，然后再更新maven项目即可
 		view下tool windows,选择maven projects，在打开的maven 窗口点击刷新即可 -->
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>

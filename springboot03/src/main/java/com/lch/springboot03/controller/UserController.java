@@ -22,7 +22,7 @@ public class UserController {
     public String lsit(Model model){
         List<User> users = userService.getUserList();
         model.addAttribute("users",users);
-        return "user/list"; // 跳转到springboot03\src\main\resources\templates\user下的list.html
+        return "user/list"; // 跳转到springboot03/src/main/resources/templates/user下的list.html
     }
 
     @RequestMapping("/toAdd")
