@@ -12,6 +12,7 @@
     <artifactId>springboot-demo1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-demo1</name>
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -36,10 +37,10 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+        </dependency>-->
 
 
         <dependency>
@@ -55,6 +56,7 @@
         </dependency>
     </dependencies>
 
+    <!-- 打包依赖，如果不加，执行maven打包，运行后会报错，no main manifest attribute  -->
     <build>
         <plugins>
             <plugin>
