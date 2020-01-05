@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ExceptionController {
 
+    /**
+     * 测试捕获到异常：CustomExceptionHandler对捕获到的Exception.class异常，
+     * 返回封装了异常信息的json数据
+     * @return
+     */
     @RequestMapping("/testExceptoin")
     @ResponseBody
     public Object index(){
@@ -15,6 +20,11 @@ public class ExceptionController {
         return "testExceptoin";
     }
 
+    /**
+     * 测试捕获到自定义异常，跳转到error500.html 页面（thymeleaf模板引擎）
+     * http://localhost:8080/testCustomExceptoin
+     * @return
+     */
     @RequestMapping("/testCustomExceptoin")
     @ResponseBody
     public Object customException(){

@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2.filter;
+package com.example.lchtest.springbootdemo2.customfilter;
 
 
 import javax.servlet.*;

@@ -35,7 +35,7 @@ public class CustomExceptionHandler {
     /**
      * 自定义异常处理类
      * @param e
-     * @return 逻辑视图名，sringboot解析后跳转到错误处理页面error500.html
+     * @return 逻辑视图名，sringboot解析后跳转到错误处理页面error500.html（thymeleaf模板引擎）
      */
     @ExceptionHandler(value = MyException.class)
     public  Object handleException(MyException e){
