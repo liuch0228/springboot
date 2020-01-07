@@ -27,3 +27,30 @@
  
 REQUIRES_NEW 要写在service里面然后该方法被调用，才会起作用，同一个service中只会起一个事务
 
+#### springboot整合redis
+##### 1.添加依赖
+```     
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+```
+##### 2.配置文件
+```
+#redis配置
+spring.redis.database=0
+spring.redis.host=192.168.5.106
+spring.redis.port=8007
+#超时时间，单位ms
+spring.redis.timeout=3000
+# redis连接池中最大空闲连接，默认是8
+spring.redis.jedis.pool.max-idle=8
+# -1表示不限制；连接池可分配的最大的jedis实例个数，实例个数达到该配置值时，连接池状态为exhausted
+spring.redis.jedis.pool.max-active=8
+#等待可用连接的最大时间，单位ms,默认-1 表示永不超时
+spring.redis.jedis.pool.max-wait=1000
+```
+#### 3.使用
+
+
+
