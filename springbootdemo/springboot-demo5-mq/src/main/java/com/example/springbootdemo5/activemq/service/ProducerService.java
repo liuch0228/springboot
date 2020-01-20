@@ -1,4 +1,4 @@
-package com.example.springbootdemo5.service;
+package com.example.springbootdemo5.activemq.service;
 
 
 import javax.jms.Destination;
@@ -19,4 +19,10 @@ public interface ProducerService {
      * @param message 待发送的消息
      */
     void sendMessage(final String message);
+
+    /**
+     *  发布订阅模式-发布消息
+     * @param message
+     */
+    void publish(final String message);
 }

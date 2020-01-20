@@ -1,12 +1,14 @@
 package com.example.springbootdemo5;
 
 import org.apache.activemq.command.ActiveMQQueue;
+import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jms.annotation.EnableJms;
 
 import javax.jms.Queue;
+import javax.jms.Topic;
 
 
 /**
@@ -24,6 +26,16 @@ public class MQApplication {
     public Queue queue(){
         return new ActiveMQQueue("common.queue");
     }
+
+    /**
+     * activemq发布订阅模式，需要指定topic!
+     * @return
+     */
+    @Bean
+    public Topic topic(){
+        return new ActiveMQTopic("video.topic");
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(MQApplication.class, args);
     }

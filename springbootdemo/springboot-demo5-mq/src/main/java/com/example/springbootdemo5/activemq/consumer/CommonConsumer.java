@@ -1,4 +1,4 @@
-package com.example.springbootdemo5.consumer;
+package com.example.springbootdemo5.activemq.consumer;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
