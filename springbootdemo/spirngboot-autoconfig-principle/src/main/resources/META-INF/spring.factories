@@ -1,0 +1,3 @@
+# spring加载时，会扫描spring.factories,将值返回给spring
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.lchtest.spirngbootautoconfigprinciple.demo3.TestAutoConfiguration
