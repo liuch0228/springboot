@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
-@RestController
-@RequestMapping("/api/v1/redis")
+//@RestController
+//@RequestMapping("/api/v1/redis")
 public class RedisController {
 //    @Autowired
 //    private StringRedisTemplate redisTemplate;
 
-    @Autowired
+//    @Autowired
     private RedisClient redisClient;
 
 

@@ -15,10 +15,10 @@ import java.util.Date;
 @Controller
 public class UserController {
 
-    @Autowired
+//    @Autowired
     private UserService userService;
 
-    @Autowired
+//    @Autowired
     UpdateUserService updateUserService;
 
     @RequestMapping("/add")

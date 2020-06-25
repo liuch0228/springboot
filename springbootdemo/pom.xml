@@ -10,6 +10,11 @@
     <modules>
         <module>springboot-demo1</module>
         <module>springboot-demo2</module>
+        <module>springboot-demo3</module>
+        <module>springboot-demo4</module>
+        <module>springboot-demo5-mq</module>
+        <module>springboot-demo6</module>
+        <module>springboot-demo7</module>
     </modules>
 
     <parent>
@@ -33,8 +38,8 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <!-- <scope>runtime</scope>
-             <optional>true</optional>-->
+             <scope>runtime</scope>
+             <optional>true</optional>
         </dependency>
 
         <dependency>

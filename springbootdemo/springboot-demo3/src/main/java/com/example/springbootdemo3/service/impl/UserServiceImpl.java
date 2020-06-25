@@ -6,18 +6,19 @@ import com.example.springbootdemo3.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class UserServiceImpl implements UserService {
-    @Autowired
+//    @Autowired
     private UserMapper userMapper;
 
     @Override
     public Integer addUser(User user) {
-        return userMapper.insert(user);
+//        return userMapper.insert(user);
+        return 1;
     }
 
     @Override
     public void updateUser(User user) {
-        userMapper.update(user);
+//        userMapper.update(user);
     }
 }

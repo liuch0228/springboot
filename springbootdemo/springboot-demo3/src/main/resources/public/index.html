@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务端推送测试</title>
+    <script>
+        var source =new EventSource("/sse/getdata");
+        source.onmessage = function (ev) {
+            console.log(ev.data);
+            document.getElementById("result").innerText = ev.data;
+        };
+    </script>
+</head>
+<body>
+模拟股票行情：
+<div>
+    服务端推送消息为：<div id="result"></div>
+</div>
+</body>
+</html>

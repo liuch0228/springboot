@@ -14,19 +14,19 @@ import org.springframework.transaction.annotation.Transactional;
  * 如果调用当前方法的service中开启了事务，这里的事务跟调用者的事务没有关系
  *
  */
-@Service
+//@Service
 //@Transactional(propagation = Propagation.REQUIRES_NEW)
 public class UpdateUserService {
-    @Autowired
+//    @Autowired
     private UserMapper userMapper;
 
     /**
      * 测试事务嵌套—— 被调用方法开启新的事务：外层异常不影响这里
      * @param user
      */
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+//    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void updateUser(User user){
-        userMapper.update(user);
+//        userMapper.update(user);
         //如果这个被调用的方法中有异常，则调用的地方和这里都会回滚，如果是调用的地方有异常，这里执行没有异常，则仅仅是调用的方法中的事务会回滚
 //        int i = 1/0;
     }

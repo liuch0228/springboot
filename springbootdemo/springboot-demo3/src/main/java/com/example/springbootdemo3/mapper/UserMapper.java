@@ -9,7 +9,7 @@ public interface UserMapper {
 
 
     // 保存对象，获取数据库自增id,keyColumn:数据库自增主键名
-    @Options(useGeneratedKeys = true,keyColumn = "id",keyProperty = "id")
+   /* @Options(useGeneratedKeys = true,keyColumn = "id",keyProperty = "id")
     @Insert("insert into users(name,phone,create_time,age) values (#{name},#{phone},#{createTime},#{age})")
     Integer insert(User user);
 
@@ -26,5 +26,5 @@ public interface UserMapper {
     void update(User user);
 
     @Delete("delete from users where id=#{userId}")
-    void delete(Integer userId);
+    void delete(Integer userId);*/
 }
