@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class ExceptionController {
+public class ExceptionTestController {
 
     /**
      * 测试捕获到异常：CustomExceptionHandler对捕获到的Exception.class异常，
@@ -36,6 +36,4 @@ public class ExceptionController {
         }
         return "testExceptoin";
     }
-
-
 }
