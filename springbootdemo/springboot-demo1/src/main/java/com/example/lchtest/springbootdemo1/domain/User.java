@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2.domain;
+package com.example.lchtest.springbootdemo1.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;

@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2.domain;
+package com.example.lchtest.springbootdemo1.domain;
 
 /**
  *  自定义异常类

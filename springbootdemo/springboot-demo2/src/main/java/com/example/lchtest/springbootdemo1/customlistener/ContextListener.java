@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2.customlistener;
+package com.example.lchtest.springbootdemo1.customlistener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

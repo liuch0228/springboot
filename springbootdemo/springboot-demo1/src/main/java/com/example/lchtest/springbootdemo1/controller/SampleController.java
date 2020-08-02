@@ -1,7 +1,7 @@
-package com.example.lchtest.springbootdemo2;
+package com.example.lchtest.springbootdemo1.controller;
 
-import com.example.lchtest.springbootdemo2.domain.Person;
-import com.example.lchtest.springbootdemo2.domain.User;
+import com.example.lchtest.springbootdemo1.domain.Person;
+import com.example.lchtest.springbootdemo1.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -15,7 +15,6 @@ import java.util.Date;
 // 不是application.properties中的配置项，要使用@Value注解读取配置值的时候，需要指出配置项的类路径
 @PropertySource("classpath:properties/test.properties")
 public class SampleController {
-
 
     @Autowired
     private Person person;
@@ -38,6 +37,13 @@ public class SampleController {
     public Object test(){
         System.out.println("resources/application.properties 配置项值：" + hobby);
         System.out.println("resources/properties/test.properties 配置项值：" + name);
+        return "hobby:" + hobby + "; name:" + name;
+    }
+
+    @RequestMapping("/testproperties2")
+    @ResponseBody
+    public Object testPersonPerties(){
+        System.out.println(person.getName());
         return person;
     }
 
@@ -55,10 +61,10 @@ public class SampleController {
      * 视图解析器测试
      * @return
      */
-    @RequestMapping("/index")
-    public Object idnex(){
-        return "index";
-    }
+//    @RequestMapping("/index")
+//    public Object idnex(){
+//        return "index";
+//    }
 
 
 

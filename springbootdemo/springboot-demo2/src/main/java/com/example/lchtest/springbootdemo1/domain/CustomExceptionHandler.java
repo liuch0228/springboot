@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2.domain;
+package com.example.lchtest.springbootdemo1.domain;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2.custominterceptor;
+package com.example.lchtest.springbootdemo1.custominterceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

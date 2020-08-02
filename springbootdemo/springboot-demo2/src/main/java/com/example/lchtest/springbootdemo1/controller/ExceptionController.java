@@ -1,6 +1,6 @@
-package com.example.lchtest.springbootdemo2.controller;
+package com.example.lchtest.springbootdemo1.controller;
 
-import com.example.lchtest.springbootdemo2.domain.MyException;
+import com.example.lchtest.springbootdemo1.domain.MyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

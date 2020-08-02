@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2;
+package com.example.lchtest.springbootdemo1;
 
 
 import org.springframework.boot.SpringApplication;

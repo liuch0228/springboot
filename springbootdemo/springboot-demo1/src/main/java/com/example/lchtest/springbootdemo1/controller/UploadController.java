@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2;
+package com.example.lchtest.springbootdemo1.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

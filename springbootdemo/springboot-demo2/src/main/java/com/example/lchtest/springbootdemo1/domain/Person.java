@@ -1,24 +1,16 @@
-package com.example.lchtest.springbootdemo2.domain;
+package com.example.lchtest.springbootdemo1.domain;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-/**
- * 配置读取类
- * 要求：1. 属性名要和配置项中的名称一致 2.要有getter setter
- * 这里实现序列化接口是因为controller中要返回json数据给浏览器
- */
-// 声明这是spring的一个组件
 @Component
-// 要读取的配置文件的位置
-@PropertySource("classpath:properties/person.properties")
-// 配置项的前缀
 @ConfigurationProperties(prefix = "person")
+@PropertySource("classpath:person.properties")
 public class Person {
     private String name;
     private int age;
-    private  String phone;
+    private String hobby;
 
     public String getName() {
         return name;
@@ -36,11 +28,20 @@ public class Person {
         this.age = age;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getHobby() {
+        return hobby;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", hobby='" + hobby + '\'' +
+                '}';
     }
 }

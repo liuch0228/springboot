@@ -1,4 +1,4 @@
-package com.example.lchtest.springbootdemo2.customservlet;
+package com.example.lchtest.springbootdemo1.customservlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
