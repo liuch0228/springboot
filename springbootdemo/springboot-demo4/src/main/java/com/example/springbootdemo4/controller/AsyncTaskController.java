@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 /**
@@ -46,7 +47,7 @@ public class AsyncTaskController {
      * @throws InterruptedException
      */
     @GetMapping("/async2")
-    public String execTask2() throws InterruptedException {
+    public String execTask2() throws InterruptedException, ExecutionException {
         long start = System.currentTimeMillis();
 
         Future<String> task4 = asyncTask.task4();
@@ -59,8 +60,9 @@ public class AsyncTaskController {
             }
         }
         long end = System.currentTimeMillis();
+
         System.out.println("总耗时：" + (end -start));
-        return "success,suspend " +  (end -start) + "ms";
+        return "success,suspend " +  (end -start) + "ms" + "; task4 result = " + task4.get();
     }
 
 

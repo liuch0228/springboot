@@ -7,11 +7,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 // @EnableScheduling注解开启定时任务
-@EnableScheduling
+//@EnableScheduling
 // 开启异步任务：@EnableAsync会把一个类标记为异步类
 @EnableAsync
-public class ScheduleApplication {
+public class Demo4Application {
     public static void main(String[] args) {
-        SpringApplication.run(ScheduleApplication.class, args);
+        SpringApplication.run(Demo4Application.class, args);
     }
 }

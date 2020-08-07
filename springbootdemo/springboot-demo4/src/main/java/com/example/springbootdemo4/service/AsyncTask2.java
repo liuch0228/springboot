@@ -1,11 +1,11 @@
 package com.example.springbootdemo4.service;
 
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.AsyncResult;
-import org.springframework.stereotype.Component;
+        import org.springframework.scheduling.annotation.Async;
+        import org.springframework.scheduling.annotation.AsyncResult;
+        import org.springframework.stereotype.Component;
 
-import java.util.concurrent.Future;
-import java.util.concurrent.FutureTask;
+        import java.util.concurrent.Future;
+        import java.util.concurrent.FutureTask;
 
 /**
  * 1.异步任务类 ，不能直接写到Controller里
@@ -27,7 +27,7 @@ public class AsyncTask2 {
         System.out.println("任务1耗时：" + (end-begin)) ;
         return new AsyncResult<>("任务4");
     }
-//    @Async
+    //    @Async
     public Future<String> task5() throws InterruptedException {
         long begin = System.currentTimeMillis();
         Thread.sleep(3000);
@@ -35,7 +35,7 @@ public class AsyncTask2 {
         System.out.println("任务5耗时：" + (end-begin)) ;
         return new AsyncResult<>("任务5");
     }
-//    @Async
+    //    @Async
     public Future<String> task6() throws InterruptedException {
         long begin = System.currentTimeMillis();
         Thread.sleep(1000);
