@@ -6,7 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jms.annotation.EnableJms;
+import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
+import org.springframework.jms.config.JmsListenerContainerFactory;
 
+import javax.jms.ConnectionFactory;
 import javax.jms.Queue;
 import javax.jms.Topic;
 
@@ -36,7 +39,21 @@ public class MQApplication {
         return new ActiveMQTopic("video.topic");
     }
 
+    /**
+     * @JmsListener如果不指定独立的containerFactory的话只能消费queue消息,
+     * 要同时支持点对点和发布订阅模式，需要给topic定义独立的JmsListenerContainer
+     */
+    @Bean
+    public JmsListenerContainerFactory<?> jmsListenerContainerTopic(ConnectionFactory activeMQConnectionFactory){
+        DefaultJmsListenerContainerFactory bean = new DefaultJmsListenerContainerFactory();
+        bean.setPubSubDomain(true);
+        bean.setConnectionFactory(activeMQConnectionFactory);
+        return bean;
+    }
+
+
     public static void main(String[] args) {
         SpringApplication.run(MQApplication.class, args);
     }
 }
+
